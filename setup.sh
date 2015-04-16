@@ -1,7 +1,8 @@
-sudo yum -y install @development-tools
-sudo yum -y install fedora-packager
+## RPM creation
+sudo yum -y install @development-tools fedora-packager
 
+# Setup folder structure in user home
 rpmdev-setuptree
 
-yum -y install cmake
-yum install gcc-c++
+#Compilation
+yum -y install cmake gcc-c++
