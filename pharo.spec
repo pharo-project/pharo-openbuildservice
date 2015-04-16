@@ -12,3 +12,10 @@ The virutal machine for Pharo - the immersive programming experience. Pharo is a
 %changelog
 * Thu Apr 016 2015 Sean DeNigris <sean@clipperadams.com> - 4.0-1
 - Initial version of the package
+
+%build
+if [ ! -e vmVersionInfo.h ]; then
+	../scripts/extract-commit-info.sh
+fi
+cmake .
+make
