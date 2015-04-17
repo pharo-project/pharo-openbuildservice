@@ -1,3 +1,10 @@
+Name:     pharo
+Version:  4.0
+Release:  1
+Summary:  The virtual machine for Pharo
+License:  MIT
+URL:      http://pharo.org    
+Source0:  sources.tar.gz
 #Source0:  https://ci.inria.fr/pharo/job/PharoVM/Architecture=32,Slave=vm-builder-linux/lastSuccessfulBuild/artifact/sources.tar.gz
 
 %description
@@ -12,8 +19,10 @@ sh build.sh
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}%{_bindir}/
-cp -p results/* %{buildroot}%{_bindir}/
+mkdir -p %{buildroot}%{_bindir}/pharo-vm
+cp -p results/* %{buildroot}%{_bindir}/pharo-vm
+cd %{buildroot}%{_bindir}
+cp ~/zero/pharo ~/zero/pharo-ui .
 
 %changelog
 * Thu Apr 016 2015 Sean DeNigris <sean@clipperadams.com> - 4.0-1
